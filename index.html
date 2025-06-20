@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Government & Healthcare Software | Ascot Software</title>
+  <meta name="description" content="Ascot Software delivers AI‑powered workflow automation, unified data hubs, and accessible citizen‑plus‑clinician portals that modernize permits, EHRs, and more—fast.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text: #1a385f;
+      --text-body: #475b75;
+      --text-inverse: #ffffff;
+      --highlight: #4ab677;
+      --highlight-active: #3a9462;
+      --accent: #ee734e;
+      --accent-active: #d85d38;
+      --alt-bg: #fbfbfb;
+      --bg: #ffffff;
+      --border: #e0e0e0;
+      --muted: #f0f0f0;
+      --muted-active: #e8e8e8;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Figtree', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0;
+    }
+    nav ul li::after {
+      content: "•";
+      margin-left: 0.5rem;
+      color: var(--highlight);
+    }
+    nav ul li:last-child::after {
+      content: "";
+    }
+    nav div button {
+      margin-left: 0.5rem;
+    }
+    header, section, footer {
+      padding: 2rem;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    button {
+      color: var(--text);
+      background-color: var(--muted);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-family: inherit;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: opacity 0.2s ease;
+    }
+    button.highlight {
+      background-color: var(--highlight);
+      color: #fff;
+    }
+    button.accent {
+      background-color: var(--accent);
+      color: #fff;
+    }
+    button:hover,
+    button:focus,
+    button:active {
+      background-color: var(--muted-active);
+    }
+    button.highlight:hover,
+    button.highlight:focus,
+    button.highlight:active {
+      background-color: var(--highlight-active);
+    }
+    button.accent:hover,
+    button.accent:focus,
+    button.accent:active {
+      background-color: var(--accent-active);
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin: 0 0 1rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin: 0 0 0.5rem;
+    }
+    p {
+      font-size: 1.3rem;
+      margin: 0 0 1rem;
+    }
+    p.small {
+      font-size: 1rem;
+      margin: 0 0 0.7rem;
+    }
+    p.large {
+      font-size: 1.5rem;
+      margin: 0 0 1.5rem;
+    }
+    p.subtitle {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 0 0 1rem;
+    }
+    a {
+      color: var(--text);
+      text-decoration: none !important;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0.5rem 0;
+    }
+    hr.body {
+      border-color: var(--text-body);
+    }
+    .text {
+      color: var(--text)
+    }
+    .text-body {
+      color: var(--text-body);
+    }
+    .text-inverse {
+      color: #fff;
+    }
+    .cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+      background-color: #4AB677;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='546' height='455' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.03'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/svg%3E");
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+    .cta button {
+      margin-top: 2em;
+    }
+    .bg-accent{
+      background-color: var(--accent);
+    }
+    .bg-highlight {
+      background-color: var(--highlight);
+    }
+    .hero {
+      width: 100%;
+    }
+    .hero-content {
+      width: 75%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+    }
+    .hero-image {
+      width: 65%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero-dialog {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 400px;
+      text-align: center;
+      background: var(--bg);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+    .feature {
+      display: flex;
+      gap: 3rem;
+      margin: 4rem auto;
+      max-width: 70%;
+    }
+    .feature-reverse {
+      flex-direction: row-reverse;
+    }
+    .feature-content {
+      flex: 1;
+      text-align: left;
+    }
+    .feature-content button {
+      margin-top: 1rem;
+    }
+    .feature-image {
+      flex: 1;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .list li {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .list li::after {
+      content: "•";
+      font-size: 2rem;
+      color: var(--text-inverse);
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 20%);
+    }
+    .list li:last-child::after {
+      content: "";
+    }
+    .about-us {
+      padding: 2rem;
+      background: var(--muted);
+      text-align: center;
+    }
+    .about-us-content {
+      width: 75%;
+      margin: 0 auto;
+    }
+    .about-us-images {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      gap: 1rem;
+    }
+    .about-us-images .image-wrapper {
+      position: relative;
+      width: 50%;
+    }
+    .about-us-images figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 1rem;
+      text-align: right;
+    }
+    footer {
+      background: var(--alt-bg);
+    }
+    @media (max-width: 1200px) {
+      .hero-content {
+        width: 90%;
+      }
+      .hero-image {
+        width: 80%;
+      }
+      .feature {
+        flex-direction: column;
+        align-items: center;
+        max-width: 75%;
+      }
+      .feature-reverse {
+        flex-direction: column;
+      }
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+      nav div {
+        margin-top: 1rem;
+      }
+      .hero-content {
+        width: 100%;
+        padding: 0 1rem;
+      }
+      .hero-image {
+        width: 100%;
+        max-width: none;
+      }
+      h2 {
+        font-size: 1.75rem;
+      }
+      p {
+        font-size: 1.125rem;
+      }
+      p.subtitle {
+        font-size: 1.225rem;
+      }
+      .feature {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+      .feature-reverse {
+        flex-direction: column-reverse;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Ascot Software</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#what-we-do">What We Do</a></li>
+      <li><a href="#who-we-are">Who We Are</a></li>
+    </ul>
+    <div>
+      <button class="highlight">Get Started</button>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <a id="home"></a>
+    <article class="hero-content">
+      <h1>Smart Software. Serious Impact.</h1>
+      <p class="text-body">
+        Ascot Software helps public‑sector and healthcare organizations break free from legacy constraints by stitching their existing systems into one intelligent, AI‑ready platform.
+      </p>
+      <img class="hero-image" src="/hero.jpg" alt="Hero image">
+      <div class="hero-dialog">
+        <p class="small">
+          Our modular approach turns data silos into secure, real‑time insights and automates the busywork that slows your teams.
+        </p>
+        <button class="highlight">See How It Works</button>
+      </div>
+    </article>
+  </header>
+
+  <section class="feature">
+    <a id="what-we-do"></a>
+    <article class="feature-content">
+      <h2>AI‑Driven Workflow Automation</h2>
+      <p class="text-body">We use modern automation and AI to build flexible scaffolding around existing systems—no rip‑and‑replace needed. Our modular solutions work in the cloud or on‑prem, enabling real-time approvals, notifications, and data handoffs with full control over modernization.</p>
+      <button class="accent">Learn More</button>
+    </article>
+    <figure class="feature-image">
+      <img src="assets/figure-one.png" alt="AI‑driven workflow automation hub with interconnected systems">
+    </figure>
+  </section>
+
+  <section class="feature feature-reverse">
+    <article class="feature-content">
+      <h2>Secure Data Integration & Standardization</h2>
+      <p class="text-body">
+        We ingest, analyze, and clean data from diverse sources into a centralized, secure environment. Automated processes de‑duplicate, aggregate, and standardize records to ensure accuracy, consistency, and full compliance.
+      </p>
+      <button class="accent">Explore Data Solutions</button>
+    </article>
+    <figure class="feature-image">
+      <img src="assets/figure-two.png" alt="Central database pulling data streams from scattered sources">
+    </figure>
+  </section>
+
+  <section class="feature">
+    <article class="feature-content">
+      <h2>Unified, Role‑Based Access</h2>
+      <p class="text-body">
+        We build centralized, role-based portals that provide applicants, citizens, clinicians, and staff with a single, consistent point of access to services and information—designed with an accessibility-first approach to support people of all abilities and languages.
+      </p>
+      <button class="accent">Request a Demo</button>
+    </article>
+    <figure class="feature-image">
+      <img src="assets/figure-three.png" alt="Accessible, role-based portals for applicants, citizens, and clinicians">
+    </figure>
+  </section>
+
+  <section class="cta bg-accent">
+    <h2 class="text-inverse">Ready to Transform Your Operations?</h2>
+    <p class="text-inverse subtitle">Join agencies and organizations already seeing 50% faster processing times and zero data re-entry.</p>
+    <ul class="list text-inverse">
+      <li>50% faster form or workflow completion</li>
+      <li>AI and automation eliminate toil, streamlines record management</li>
+      <li>Zero data re-entry—information flows automatically</li>
+      <li>Built-in compliance with HIPAA, FedRAMP, WCAG‑AA, and more...</li>
+      <li>Future-proof integrations that welcome new systems and vendors</li>
+    </ul>
+    <button>Schedule a Demo</button>
+  </section>
+
+  <section class="feature">
+    <article class="feature-content">
+      <h2 class="text">Security & Standards First</h2>
+      <p class="text-body">Single‑tenant cloud or on‑prem options with end‑to‑end encryption, granular audit logs, and compliance aligned to NIST & CIS benchmarks. Native support for FHIR, HL7v2, OAuth2, and open APIs ensures your data stays portable.</p>
+    </article>
+    <figure class="feature-image">
+      <img src="https://placehold.co/400x100" alt="Security and compliance badges">
+    </figure>
+  </section>
+
+  <section class="about-us">
+    <article class="about-us-content">
+      <a id="who-we-are"></a>
+      <h2 class="text">Who we are</h2>
+      <p class="text-body">
+        A group of highly-experienced technologists with over 30 years of combined experience, we’ve built technology solutions across early-stage startups, government agencies, healthcare systems, real estate development, large enterprises, and consulting firms. We bring a deep understanding of both legacy challenges and modern tools—translating complex needs into practical, scalable outcomes.
+      </p>
+    </article>
+    <article class="about-us-images">
+      <figure class="image-wrapper">
+        <img src="assets/devon.png" alt="Devon Anderson">
+        <figcaption>
+          <h3>Devon Anderson</h3>
+          <hr class="body"/>
+          <p class="small text-body">Managing Partner</p>
+        </figcaption>
+      </figure>
+      <figure class="image-wrapper">
+        <img src="assets/devon.png" alt="Devon Anderson">
+        <figcaption>
+          <h3>Devon Anderson</h3>
+          <hr class="body"/>
+          <p class="small text-body">Managing Partner</p>
+        </figcaption>
+      </figure>
+    </article>
+  </section>
+
+  <section class="cta bg-highlight">
+    <h2 class="text-inverse">Start Small, Scale Smart</h2>
+    <p class="text-inverse subtitle">Up to 30% total‑cost reduction and 2‑3× faster time‑to‑benefit over monolithic alternatives.</p>
+    <button>Get Your Free Assessment</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ascot Software - Smart Government & Healthcare Solutions</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links with easing and nav offset
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('nav a[href^="#"]');
+      const navHeight = 90; // Nav header height in pixels
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            const targetPosition = targetElement.offsetTop - navHeight;
+
+            // Smooth scroll with custom easing
+            smoothScrollTo(targetPosition, 800);
+          }
+        });
+      });
+
+      // Custom smooth scroll function with ease-in-out
+      function smoothScrollTo(target, duration) {
+        const start = window.pageYOffset;
+        const distance = target - start;
+        let startTime = null;
+
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1);
+
+          // Ease-in-out cubic function
+          const ease = progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+          window.scrollTo(0, start + distance * ease);
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+          }
+        }
+
+        requestAnimationFrame(animation);
+      }
+    });
+  </script>
+</body>
+</html>
