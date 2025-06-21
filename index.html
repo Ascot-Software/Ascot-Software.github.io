@@ -39,6 +39,10 @@
       color: var(--text);
       line-height: 1.6;
     }
+    main {
+      margin: 0;
+      padding: 0;
+    }
     nav {
       position: sticky;
       top: 0;
@@ -432,157 +436,159 @@
   </style>
 </head>
 <body>
-  <nav>
-    <div class="logo">
-      <img src="assets/logo.png" alt="Ascot Software Logo" style="height: 40px; vertical-align: middle;">
-      Ascot Software
-    </div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#what-we-do">What We Do</a></li>
-      <li><a href="#who-we-are">Who We Are</a></li>
-    </ul>
-    <div>
-      <button class="highlight">Get Started</button>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <a id="home"></a>
-    <article class="hero-content">
-      <h1>Smart Software. Serious Impact.</h1>
-      <p class="text-body">
-        Ascot Software helps public‑sector and healthcare organizations break free from legacy constraints by stitching their
-        existing systems into one intelligent, AI‑ready platform.
-      </p>
-      <img class="hero-image" src="assets/hero.jpg" alt="Hero image">
-      <div class="hero-dialog">
-        <p class="small">
-          Our modular approach turns data silos into secure, real‑time insights and automates the busywork that slows your teams.
-        </p>
-        <button class="highlight">See How It Works</button>
+  <main>
+    <nav>
+      <div class="logo">
+        <img src="assets/logo.png" alt="Ascot Software Logo" style="height: 40px; vertical-align: middle;">
+        Ascot Software
       </div>
-    </article>
-  </header>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#what-we-do">What We Do</a></li>
+        <li><a href="#who-we-are">Who We Are</a></li>
+      </ul>
+      <div>
+        <button class="highlight">Get Started</button>
+      </div>
+    </nav>
 
-  <section class="feature">
-    <a id="what-we-do"></a>
-    <article class="feature-content">
-      <h2>AI‑Driven Workflow Automation</h2>
-      <p class="text-body">
-        We use modern automation and AI to build flexible scaffolding around existing systems—no rip‑and‑replace needed.
-        Our modular solutions work in the cloud or on‑prem, enabling real-time approvals, notifications,
-        and data handoffs with full control over modernization.
-      </p>
-      <button class="accent">Learn More</button>
-    </article>
-    <figure class="feature-image">
-      <img src="assets/figure-one.png" alt="A 3D isometric illustration of a workflow automation system with AI components, showing data flow and process automation">
-    </figure>
-  </section>
+    <header class="hero">
+      <a id="home"></a>
+      <article class="hero-content">
+        <h1>Smart Software. Serious Impact.</h1>
+        <p class="text-body">
+          Ascot Software helps public‑sector and healthcare organizations break free from legacy constraints by stitching their
+          existing systems into one intelligent, AI‑ready platform.
+        </p>
+        <img class="hero-image" src="assets/hero.jpg" alt="Hero image">
+        <div class="hero-dialog">
+          <p class="small">
+            Our modular approach turns data silos into secure, real‑time insights and automates the busywork that slows your teams.
+          </p>
+          <button class="highlight">See How It Works</button>
+        </div>
+      </article>
+    </header>
 
-  <section class="feature feature-reverse">
-    <article class="feature-content">
-      <h2>Secure Data Integration & Standardization</h2>
-      <p class="text-body">
-        We ingest, analyze, and clean data from diverse sources into a centralized, secure environment. Automated processes
-        de‑duplicate, aggregate, and standardize records to ensure accuracy, consistency, and full compliance.
-      </p>
-      <button class="accent">Explore Data Solutions</button>
-    </article>
-    <figure class="feature-image">
-      <img src="assets/figure-two.png" alt="A 3D isometric illustration of data center city, showing data being cleaned and secured">
-    </figure>
-  </section>
-
-  <section class="feature">
-    <article class="feature-content">
-      <h2>Unified, Role‑Based Access</h2>
-      <p class="text-body">
-        We build centralized, role-based portals that provide applicants, citizens, clinicians, and staff with a single,
-        consistent point of access to services and information—designed with an accessibility-first approach to support
-        people of all abilities and languages.
-      </p>
-      <button class="accent">Request a Demo</button>
-    </article>
-    <figure class="feature-image">
-      <img src="assets/figure-three.png" alt="A 3D isometric illustration of a laptop with a unified portal interface, surrounded by public sector activities">
-    </figure>
-  </section>
-
-  <section class="cta bg-accent">
-    <h2 class="text-inverse">Ready to Transform Your Operations?</h2>
-    <p class="text-inverse subtitle">Join agencies and organizations already seeing 50% faster processing times and zero data re-entry.</p>
-    <ul class="list text-inverse">
-      <li>50% faster form or workflow completion</li>
-      <li>AI and automation eliminate toil, streamlines record management</li>
-      <li>Zero data re-entry—information flows automatically</li>
-      <li>Built-in compliance with HIPAA, FedRAMP, WCAG‑AA, and more...</li>
-      <li>Future-proof integrations that welcome new systems and vendors</li>
-    </ul>
-    <button>Schedule a Demo</button>
-  </section>
-
-  <section class="feature">
-    <article class="feature-content">
-      <h2 class="text">Security & Standards First</h2>
-      <p class="text-body">Single‑tenant cloud or on‑prem options with end‑to‑end encryption, granular audit logs, and compliance aligned to NIST & CIS benchmarks. Native support for FHIR, HL7v2, OAuth2, and open APIs ensures your data stays portable.</p>
-    </article>
-    <figure class="feature-image">
-      <img src="assets/figure-four.png" alt="A 3D isometric illustration of a datacenter surrounded by security features">
-    </figure>
-  </section>
-
-  <section class="about-us">
-    <article class="about-us-content">
-      <a id="who-we-are"></a>
-      <h2 class="text">Who we are</h2>
-      <p class="text-body">
-        A group of highly-experienced technologists with over 30 years of combined experience,
-        we’ve built technology solutions across early-stage startups, government agencies,
-        healthcare systems, real estate development, large enterprises, and consulting firms.
-        We bring a deep understanding of both legacy challenges and modern tools—translating complex needs into practical, scalable outcomes.
-      </p>
-    </article>
-    <article class="about-us-images">
-      <figure class="image-wrapper">
-        <img src="assets/daniel.png" alt="Daniel Dujisin">
-        <figcaption>
-          <h3>Daniel Dujisin</h3>
-          <hr class="body"/>
-          <p class="small text-body">Managing Partner</p>
-        </figcaption>
+    <section class="feature">
+      <a id="what-we-do"></a>
+      <article class="feature-content">
+        <h2>AI‑Driven Workflow Automation</h2>
+        <p class="text-body">
+          We use modern automation and AI to build flexible scaffolding around existing systems—no rip‑and‑replace needed.
+          Our modular solutions work in the cloud or on‑prem, enabling real-time approvals, notifications,
+          and data handoffs with full control over modernization.
+        </p>
+        <button class="accent">Learn More</button>
+      </article>
+      <figure class="feature-image">
+        <img src="assets/figure-one.png" alt="A 3D isometric illustration of a workflow automation system with AI components, showing data flow and process automation">
       </figure>
-      <figure class="image-wrapper">
-        <img src="assets/devon.png" alt="Devon Anderson">
-        <figcaption>
-          <h3>Devon Anderson</h3>
-          <hr class="body"/>
-          <p class="small text-body">Managing Partner</p>
-        </figcaption>
+    </section>
+
+    <section class="feature feature-reverse">
+      <article class="feature-content">
+        <h2>Secure Data Integration & Standardization</h2>
+        <p class="text-body">
+          We ingest, analyze, and clean data from diverse sources into a centralized, secure environment. Automated processes
+          de‑duplicate, aggregate, and standardize records to ensure accuracy, consistency, and full compliance.
+        </p>
+        <button class="accent">Explore Data Solutions</button>
+      </article>
+      <figure class="feature-image">
+        <img src="assets/figure-two.png" alt="A 3D isometric illustration of data center city, showing data being cleaned and secured">
       </figure>
-    </article>
-  </section>
+    </section>
 
-  <section class="cta bg-highlight">
-    <h2 class="text-inverse">Start Small, Scale Smart</h2>
-    <p class="text-inverse subtitle">Up to 30% total‑cost reduction and 2‑3× faster time‑to‑benefit over monolithic alternatives.</p>
-    <button>Get Your Free Assessment</button>
-  </section>
+    <section class="feature">
+      <article class="feature-content">
+        <h2>Unified, Role‑Based Access</h2>
+        <p class="text-body">
+          We build centralized, role-based portals that provide applicants, citizens, clinicians, and staff with a single,
+          consistent point of access to services and information—designed with an accessibility-first approach to support
+          people of all abilities and languages.
+        </p>
+        <button class="accent">Request a Demo</button>
+      </article>
+      <figure class="feature-image">
+        <img src="assets/figure-three.png" alt="A 3D isometric illustration of a laptop with a unified portal interface, surrounded by public sector activities">
+      </figure>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Ascot Software - Smart Government & Healthcare Solutions</p>
-  </footer>
+    <section class="cta bg-accent">
+      <h2 class="text-inverse">Ready to Transform Your Operations?</h2>
+      <p class="text-inverse subtitle">Join agencies and organizations already seeing 50% faster processing times and zero data re-entry.</p>
+      <ul class="list text-inverse">
+        <li>50% faster form or workflow completion</li>
+        <li>AI and automation eliminate toil, streamlines record management</li>
+        <li>Zero data re-entry—information flows automatically</li>
+        <li>Built-in compliance with HIPAA, FedRAMP, WCAG‑AA, and more...</li>
+        <li>Future-proof integrations that welcome new systems and vendors</li>
+      </ul>
+      <button>Schedule a Demo</button>
+    </section>
 
-  <!-- Modal HTML -->
-  <dialog id="contact-modal" class="modal" aria-hidden="true">
-    <main class="modal-content" role="dialog">
-      <header class="modal-header">
-        <button class="modal-close" aria-label="Close">&times;</button>
-      </header>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfii0tfNUpbjojMcpLaXW-FiEd3TsE2NMF2sx4t08nzGjYA6A/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </main>
-  </dialog>
+    <section class="feature">
+      <article class="feature-content">
+        <h2 class="text">Security & Standards First</h2>
+        <p class="text-body">Single‑tenant cloud or on‑prem options with end‑to‑end encryption, granular audit logs, and compliance aligned to NIST & CIS benchmarks. Native support for FHIR, HL7v2, OAuth2, and open APIs ensures your data stays portable.</p>
+      </article>
+      <figure class="feature-image">
+        <img src="assets/figure-four.png" alt="A 3D isometric illustration of a datacenter surrounded by security features">
+      </figure>
+    </section>
+
+    <section class="about-us">
+      <article class="about-us-content">
+        <a id="who-we-are"></a>
+        <h2 class="text">Who we are</h2>
+        <p class="text-body">
+          A group of highly-experienced technologists with over 30 years of combined experience,
+          we’ve built technology solutions across early-stage startups, government agencies,
+          healthcare systems, real estate development, large enterprises, and consulting firms.
+          We bring a deep understanding of both legacy challenges and modern tools—translating complex needs into practical, scalable outcomes.
+        </p>
+      </article>
+      <article class="about-us-images">
+        <figure class="image-wrapper">
+          <img src="assets/daniel.png" alt="Daniel Dujisin">
+          <figcaption>
+            <h3>Daniel Dujisin</h3>
+            <hr class="body"/>
+            <p class="small text-body">Managing Partner</p>
+          </figcaption>
+        </figure>
+        <figure class="image-wrapper">
+          <img src="assets/devon.png" alt="Devon Anderson">
+          <figcaption>
+            <h3>Devon Anderson</h3>
+            <hr class="body"/>
+            <p class="small text-body">Managing Partner</p>
+          </figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section class="cta bg-highlight">
+      <h2 class="text-inverse">Start Small, Scale Smart</h2>
+      <p class="text-inverse subtitle">Up to 30% total‑cost reduction and 2‑3× faster time‑to‑benefit over monolithic alternatives.</p>
+      <button>Get Your Free Assessment</button>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Ascot Software - Smart Government & Healthcare Solutions</p>
+    </footer>
+
+    <!-- Modal HTML -->
+    <dialog id="contact-modal" class="modal" aria-hidden="true">
+      <main class="modal-content" role="dialog">
+        <header class="modal-header">
+          <button class="modal-close" aria-label="Close">&times;</button>
+        </header>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfii0tfNUpbjojMcpLaXW-FiEd3TsE2NMF2sx4t08nzGjYA6A/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </main>
+    </dialog>
+  </main>
 
   <script>
     // Smooth scrolling for navigation links with easing and nav offset
