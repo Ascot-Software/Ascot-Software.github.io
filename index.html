@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Ascot" />
+  <link rel="manifest" href="/assets/site.webmanifest" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Government & Healthcare Software | Ascot Software</title>
-  <meta name="description" content="Ascot Software delivers AI‑powered workflow automation, unified data hubs, and accessible citizen‑plus‑clinician portals that modernize permits, EHRs, and more—fast.">
+  <meta name="description" content="Ascot Software helps public-sector and healthcare organizations modernize their operations with AI-driven workflow automation, secure data integration, and unified access. Transform legacy systems into intelligent platforms without rip-and-replace.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -46,8 +52,13 @@
       border-bottom: 1px solid var(--border);
     }
     nav .logo {
+      display: flex;
+      align-items: center;
       font-weight: bold;
       font-size: 1.2rem;
+    }
+    nav .logo img {
+      margin-right: 0.5rem;
     }
     nav ul {
       display: flex;
@@ -366,11 +377,66 @@
         margin-bottom: 1rem;
       }
     }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 200;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal[aria-hidden="false"] {
+      display: flex;
+    }
+    .modal-content {
+      background: var(--bg);
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      overflow: hidden;
+    }
+    .modal-header {
+      position: relative;
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: flex-end;
+    }
+    .modal-close {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1rem;
+      height: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-body);
+      border-radius: 50%;
+      padding: 1rem;
+      margin: 0;
+    }
+    .modal-close:hover {
+      background: rgba(0, 0, 0, 0.1);
+      color: var(--text);
+    }
   </style>
 </head>
 <body>
   <nav>
-    <div class="logo">Ascot Software</div>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Ascot Software Logo" style="height: 40px; vertical-align: middle;">
+      Ascot Software
+    </div>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#what-we-do">What We Do</a></li>
@@ -386,7 +452,8 @@
     <article class="hero-content">
       <h1>Smart Software. Serious Impact.</h1>
       <p class="text-body">
-        Ascot Software helps public‑sector and healthcare organizations break free from legacy constraints by stitching their existing systems into one intelligent, AI‑ready platform.
+        Ascot Software helps public‑sector and healthcare organizations break free from legacy constraints by stitching their
+        existing systems into one intelligent, AI‑ready platform.
       </p>
       <img class="hero-image" src="assets/hero.jpg" alt="Hero image">
       <div class="hero-dialog">
@@ -402,11 +469,15 @@
     <a id="what-we-do"></a>
     <article class="feature-content">
       <h2>AI‑Driven Workflow Automation</h2>
-      <p class="text-body">We use modern automation and AI to build flexible scaffolding around existing systems—no rip‑and‑replace needed. Our modular solutions work in the cloud or on‑prem, enabling real-time approvals, notifications, and data handoffs with full control over modernization.</p>
+      <p class="text-body">
+        We use modern automation and AI to build flexible scaffolding around existing systems—no rip‑and‑replace needed.
+        Our modular solutions work in the cloud or on‑prem, enabling real-time approvals, notifications,
+        and data handoffs with full control over modernization.
+      </p>
       <button class="accent">Learn More</button>
     </article>
     <figure class="feature-image">
-      <img src="assets/figure-one.png" alt="AI‑driven workflow automation hub with interconnected systems">
+      <img src="assets/figure-one.png" alt="A 3D isometric illustration of a workflow automation system with AI components, showing data flow and process automation">
     </figure>
   </section>
 
@@ -414,12 +485,13 @@
     <article class="feature-content">
       <h2>Secure Data Integration & Standardization</h2>
       <p class="text-body">
-        We ingest, analyze, and clean data from diverse sources into a centralized, secure environment. Automated processes de‑duplicate, aggregate, and standardize records to ensure accuracy, consistency, and full compliance.
+        We ingest, analyze, and clean data from diverse sources into a centralized, secure environment. Automated processes
+        de‑duplicate, aggregate, and standardize records to ensure accuracy, consistency, and full compliance.
       </p>
       <button class="accent">Explore Data Solutions</button>
     </article>
     <figure class="feature-image">
-      <img src="assets/figure-two.png" alt="Central database pulling data streams from scattered sources">
+      <img src="assets/figure-two.png" alt="A 3D isometric illustration of data center city, showing data being cleaned and secured">
     </figure>
   </section>
 
@@ -427,12 +499,14 @@
     <article class="feature-content">
       <h2>Unified, Role‑Based Access</h2>
       <p class="text-body">
-        We build centralized, role-based portals that provide applicants, citizens, clinicians, and staff with a single, consistent point of access to services and information—designed with an accessibility-first approach to support people of all abilities and languages.
+        We build centralized, role-based portals that provide applicants, citizens, clinicians, and staff with a single,
+        consistent point of access to services and information—designed with an accessibility-first approach to support
+        people of all abilities and languages.
       </p>
       <button class="accent">Request a Demo</button>
     </article>
     <figure class="feature-image">
-      <img src="assets/figure-three.png" alt="Accessible, role-based portals for applicants, citizens, and clinicians">
+      <img src="assets/figure-three.png" alt="A 3D isometric illustration of a laptop with a unified portal interface, surrounded by public sector activities">
     </figure>
   </section>
 
@@ -455,7 +529,7 @@
       <p class="text-body">Single‑tenant cloud or on‑prem options with end‑to‑end encryption, granular audit logs, and compliance aligned to NIST & CIS benchmarks. Native support for FHIR, HL7v2, OAuth2, and open APIs ensures your data stays portable.</p>
     </article>
     <figure class="feature-image">
-      <img src="https://placehold.co/400x100" alt="Security and compliance badges">
+      <img src="assets/figure-four.png" alt="A 3D isometric illustration of a datacenter surrounded by security features">
     </figure>
   </section>
 
@@ -464,14 +538,17 @@
       <a id="who-we-are"></a>
       <h2 class="text">Who we are</h2>
       <p class="text-body">
-        A group of highly-experienced technologists with over 30 years of combined experience, we’ve built technology solutions across early-stage startups, government agencies, healthcare systems, real estate development, large enterprises, and consulting firms. We bring a deep understanding of both legacy challenges and modern tools—translating complex needs into practical, scalable outcomes.
+        A group of highly-experienced technologists with over 30 years of combined experience,
+        we’ve built technology solutions across early-stage startups, government agencies,
+        healthcare systems, real estate development, large enterprises, and consulting firms.
+        We bring a deep understanding of both legacy challenges and modern tools—translating complex needs into practical, scalable outcomes.
       </p>
     </article>
     <article class="about-us-images">
       <figure class="image-wrapper">
-        <img src="assets/devon.png" alt="Devon Anderson">
+        <img src="assets/daniel.png" alt="Daniel Dujisin">
         <figcaption>
-          <h3>Devon Anderson</h3>
+          <h3>Daniel Dujisin</h3>
           <hr class="body"/>
           <p class="small text-body">Managing Partner</p>
         </figcaption>
@@ -496,6 +573,16 @@
   <footer>
     <p>&copy; 2025 Ascot Software - Smart Government & Healthcare Solutions</p>
   </footer>
+
+  <!-- Modal HTML -->
+  <dialog id="contact-modal" class="modal" aria-hidden="true">
+    <main class="modal-content" role="dialog">
+      <header class="modal-header">
+        <button class="modal-close" aria-label="Close">&times;</button>
+      </header>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfii0tfNUpbjojMcpLaXW-FiEd3TsE2NMF2sx4t08nzGjYA6A/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </main>
+  </dialog>
 
   <script>
     // Smooth scrolling for navigation links with easing and nav offset
@@ -544,6 +631,37 @@
 
         requestAnimationFrame(animation);
       }
+    });
+
+    // Modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('contact-modal');
+      const modalClose = modal.querySelector('.modal-close');
+      const buttons = document.querySelectorAll('button');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', function() {
+          modal.setAttribute('aria-hidden', 'false');
+        });
+      });
+
+      modalClose.addEventListener('click', function() {
+        modal.setAttribute('aria-hidden', 'true');
+      });
+
+      // Close modal on outside click
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      // Close modal on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
+          modal.setAttribute('aria-hidden', 'true');
+        }
+      });
     });
   </script>
 </body>
