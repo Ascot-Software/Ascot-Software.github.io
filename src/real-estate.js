@@ -1,4 +1,4 @@
-import "./style.css";
+import "./real-estate.css";
 import { animate, inView, stagger } from "motion";
 import { initContactForm } from "./contact-form.js";
 import arrowRightIcon from "iconoir/icons/arrow-right.svg?raw";

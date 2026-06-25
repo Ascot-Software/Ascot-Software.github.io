@@ -1,4 +1,4 @@
-import "./style.css";
+import "./healthcare.css";
 import { animate, inView, stagger } from "motion";
 import { initContactForm } from "./contact-form.js";
 import arrowDownIcon from "iconoir/icons/arrow-down.svg?raw";
@@ -73,7 +73,7 @@ if (!prefersReducedMotion) {
   );
 
   inView(
-    ".case-card, .capability-card, .footer-link, .pill-chip, .stat-card",
+    ".case-card, .capability-card, .stat-card",
     (info) => {
       animate(
         info.target,

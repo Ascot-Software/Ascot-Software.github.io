@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Shared base — imported by every page (healthcare, real-estate,
+   landing). Page-agnostic only: fonts, reset, the scroll-reveal
+   primitive, and the contact-form status states. Theme tokens and
+   components live in the per-page stylesheets.
+   ============================================================ */
+
+@theme {
+  --font-display: "Instrument Serif", serif;
+  --font-sans: "Elms Sans", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--font-sans);
+  }
+
+  /* Accent value inlined (matches the healthcare --color-accent) so the
+     selection color is identical on all pages without coupling this shared
+     file to a single theme's palette. */
+  ::selection {
+    background: color-mix(in srgb, oklch(0.8 0.09 196) 38%, transparent);
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+.reveal {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+  }
+}
+
+/* Contact-form status message (shared across pages). The success/error
+   colors are the brand green/red, inlined here so this file needs no
+   re-* tokens. */
+[data-form-status]:empty {
+  display: none;
+}
+
+[data-form-status][data-state="success"] {
+  color: #0a4536;
+  font-weight: 600;
+}
+
+[data-form-status][data-state="error"] {
+  color: #de3b2c;
+}

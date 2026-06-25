@@ -1,0 +1,50 @@
+@import "./shared.css";
+
+/* ============================================================
+   Landing page — split-panel division selector.
+   The selector previews both divisions, so it borrows accent
+   tokens from each palette: background/foreground/accent-strong
+   (healthcare) and re-green/re-red (real estate). Only those five
+   tokens are declared here — just enough for the utilities used
+   in index.html.
+   ============================================================ */
+
+@theme {
+  --color-background: oklch(0.97 0.012 82);
+  --color-foreground: oklch(0.22 0.014 250);
+  --color-accent-strong: oklch(0.64 0.11 198);
+  --color-re-green: #0a4536;
+  --color-re-red: #de3b2c;
+}
+
+.home-main {
+  animation: home-fade-in 0.8s ease both;
+}
+
+@keyframes home-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Recede the panel you're NOT pointing at, so attention lands on the
+   one you're choosing. Expresses a "non-hovered sibling" rule that
+   Tailwind variants can't reach cleanly. */
+.home-main:has(.split-panel:hover) .split-panel:not(:hover),
+.home-main:has(.split-panel:focus-visible) .split-panel:not(:focus-visible) {
+  opacity: 0.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-main {
+    animation: none;
+  }
+
+  .split-panel,
+  .split-panel * {
+    transition: none !important;
+  }
+}

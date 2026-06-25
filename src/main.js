@@ -1,4 +1,4 @@
-import "./style.css";
+import "./landing.css";
 import { animate, inView, stagger, spring } from "motion";
 
 // Central landing page. Add path-selection content here.

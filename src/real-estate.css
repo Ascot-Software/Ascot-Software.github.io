@@ -1,0 +1,91 @@
+@import "./shared.css";
+
+/* ============================================================
+   Real estate page — PIV-style green + red palette.
+   Namespaced (re-*) tokens and components, opted into via class
+   names so they never collide with the healthcare/main system.
+   ============================================================ */
+
+@theme {
+  --color-re-green: #0a4536;
+  --color-re-green-deep: #05271f;
+  --color-re-red: #de3b2c;
+  --color-re-ink: #1b2740;
+  --color-re-muted: #8a909c;
+  --color-re-surface-alt: #f4f1ec;
+  --color-re-card: #f1efeb;
+}
+
+@layer base {
+  body.re-page {
+    background-color: #ffffff;
+    color: var(--color-re-ink);
+  }
+}
+
+@layer components {
+  .re-eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.24em] text-re-red;
+  }
+
+  /* Fixed nav: transparent over the green hero, switches to a light
+     bar (via .is-light, toggled in real-estate.js) over white sections. */
+  .re-nav {
+    @apply fixed inset-x-0 top-0 z-50 transition-colors duration-300;
+  }
+
+  .re-nav-inner {
+    @apply mx-auto flex max-w-6xl items-center justify-between px-5 py-5 md:px-8;
+  }
+
+  .re-nav-logo {
+    @apply flex items-center gap-3;
+  }
+
+  .re-wordmark {
+    @apply text-sm font-bold uppercase tracking-[0.22em] text-white/90 transition-colors;
+  }
+
+  .re-nav.is-light {
+    @apply border-b border-black/5 bg-white/85 backdrop-blur-xl;
+  }
+
+  .re-nav.is-light .re-wordmark {
+    @apply text-re-ink;
+  }
+
+  .re-letstalk {
+    @apply inline-flex items-center rounded-full border border-white/40 px-5 py-2 text-sm font-semibold tracking-[-0.01em] text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60;
+  }
+
+  .re-nav.is-light .re-letstalk {
+    @apply border-re-green/30 text-re-green hover:bg-re-green/5 focus-visible:ring-re-green/40;
+  }
+
+  .re-arrow-link {
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-re-red transition-opacity hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-re-red/40 focus-visible:ring-offset-2;
+  }
+
+  .re-process-icon {
+    @apply mb-6 inline-flex size-7 items-center justify-center text-re-green;
+  }
+
+  .re-input {
+    @apply w-full border-0 border-b border-black/15 bg-transparent py-3 text-base text-re-ink transition-colors placeholder:text-re-muted focus:border-re-green focus:outline-none focus:ring-0;
+  }
+
+  .re-send {
+    @apply inline-flex items-center justify-center rounded-full bg-re-green px-10 py-3.5 text-sm font-semibold uppercase tracking-[0.12em] text-white transition-[transform,background-color] hover:-translate-y-0.5 hover:bg-re-green-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-re-green focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  /* Form field labels */
+  .re-label {
+    @apply mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-re-muted;
+  }
+}
+
+.re-process-icon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  stroke: currentColor;
+}
