@@ -91,7 +91,7 @@
   }
 
   .cta-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium tracking-[-0.02em] text-background transition-all hover:-translate-y-0.5 hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-6 py-3 text-sm font-medium tracking-[-0.02em] text-background transition-[transform,background-color] hover:-translate-y-0.5 hover:bg-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-60;
   }
 
   .cta-secondary {
@@ -235,15 +235,15 @@
 }
 
 /* ============================================================
-   Real estate page — PIV-style navy + red palette.
+   Real estate page — PIV-style green + red palette.
    Additive, namespaced (re-*) tokens and components, opted into
    via class names. The root and healthcare pages never reference
    these, so they remain visually unchanged.
    ============================================================ */
 
 @theme {
-  --color-re-navy: #163a72;
-  --color-re-navy-deep: #112a52;
+  --color-re-green: #0a4536;
+  --color-re-green-deep: #05271f;
   --color-re-red: #de3b2c;
   --color-re-ink: #1b2740;
   --color-re-muted: #8a909c;
@@ -263,7 +263,7 @@
     @apply text-xs font-bold uppercase tracking-[0.24em] text-re-red;
   }
 
-  /* Fixed nav: transparent over the navy hero, switches to a light
+  /* Fixed nav: transparent over the green hero, switches to a light
      bar (via .is-light, toggled in real-estate.js) over white sections. */
   .re-nav {
     @apply fixed inset-x-0 top-0 z-50 transition-colors duration-300;
@@ -271,6 +271,10 @@
 
   .re-nav-inner {
     @apply mx-auto flex max-w-6xl items-center justify-between px-5 py-5 md:px-8;
+  }
+
+  .re-nav-logo {
+    @apply flex items-center gap-3;
   }
 
   .re-wordmark {
@@ -290,7 +294,7 @@
   }
 
   .re-nav.is-light .re-letstalk {
-    @apply border-re-navy/30 text-re-navy hover:bg-re-navy/5 focus-visible:ring-re-navy/40;
+    @apply border-re-green/30 text-re-green hover:bg-re-green/5 focus-visible:ring-re-green/40;
   }
 
   .re-arrow-link {
@@ -298,20 +302,84 @@
   }
 
   .re-process-icon {
-    @apply mb-6 inline-flex size-7 items-center justify-center text-re-navy;
+    @apply mb-6 inline-flex size-7 items-center justify-center text-re-green;
   }
 
   .re-input {
-    @apply w-full border-0 border-b border-black/15 bg-transparent py-3 text-base text-re-ink transition-colors placeholder:text-re-muted focus:border-re-navy focus:outline-none focus:ring-0;
+    @apply w-full border-0 border-b border-black/15 bg-transparent py-3 text-base text-re-ink transition-colors placeholder:text-re-muted focus:border-re-green focus:outline-none focus:ring-0;
   }
 
   .re-send {
-    @apply inline-flex items-center justify-center rounded-full bg-re-navy px-10 py-3.5 text-sm font-semibold uppercase tracking-[0.12em] text-white transition-all hover:-translate-y-0.5 hover:bg-re-navy-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-re-navy focus-visible:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-full bg-re-green px-10 py-3.5 text-sm font-semibold uppercase tracking-[0.12em] text-white transition-[transform,background-color] hover:-translate-y-0.5 hover:bg-re-green-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-re-green focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
   }
+
+  /* Form field labels */
+  .re-label {
+    @apply mb-2 block text-xs font-semibold uppercase tracking-[0.18em] text-re-muted;
+  }
+
+  .hc-label {
+    @apply mb-2 block text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground;
+  }
+
+  /* Healthcare-page input (light, bordered, matches the page palette) */
+  .hc-input {
+    @apply w-full rounded-2xl border border-line bg-white px-4 py-3 text-base text-foreground transition-colors placeholder:text-muted-foreground/70 focus:border-accent-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-ring;
+  }
+}
+
+/* Contact-form status message (shared across pages; tokens are global). */
+[data-form-status]:empty {
+  display: none;
+}
+
+[data-form-status][data-state="success"] {
+  color: var(--color-re-green);
+  font-weight: 600;
+}
+
+[data-form-status][data-state="error"] {
+  color: var(--color-re-red);
 }
 
 .re-process-icon svg {
   width: 1.75rem;
   height: 1.75rem;
   stroke: currentColor;
+}
+
+/* ============================================================
+   Landing page — split-panel division selector.
+   ============================================================ */
+
+.home-main {
+  animation: home-fade-in 0.8s ease both;
+}
+
+@keyframes home-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Recede the panel you're NOT pointing at, so attention lands on the
+   one you're choosing. Expresses a "non-hovered sibling" rule that
+   Tailwind variants can't reach cleanly. */
+.home-main:has(.split-panel:hover) .split-panel:not(:hover),
+.home-main:has(.split-panel:focus-visible) .split-panel:not(:focus-visible) {
+  opacity: 0.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-main {
+    animation: none;
+  }
+
+  .split-panel,
+  .split-panel * {
+    transition: none !important;
+  }
 }

@@ -19,9 +19,9 @@
     <meta name="apple-mobile-web-app-title" content="Ascot Software" />
     <meta
       name="description"
-      content="Ascot Software builds dependable, AI-enabled software for real estate teams."
+      content="Ascot embeds with your team, automates the work that moves your numbers, and hands you AI infrastructure you own outright. Proof in 60 days."
     />
-    <meta name="theme-color" content="#f6f2eb" />
+    <meta name="theme-color" content="#0a4536" />
     <title>Ascot Software | Real Estate</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,49 +32,78 @@
   </head>
   <body class="re-page antialiased">
     <!-- Fixed minimal nav: wordmark + Let's Talk pill. JS toggles
-         .is-light once scrolled past the navy hero. -->
+         .is-light once scrolled past the green hero. -->
     <header class="re-nav" data-re-nav>
       <div class="re-nav-inner">
-        <span class="re-wordmark">Ascot · Real Estate</span>
-        <a href="#contact" class="re-letstalk">Let's Talk</a>
+        <div class="re-nav-logo" data-re-nav-logo>
+          <img
+            src="/public/favicon.svg"
+            alt=""
+            width="24"
+            height="24"
+            class="inline size-6 border border-white/75 rounded-full"
+            aria-hidden="true"
+          />
+          <a href="/" class="re-wordmark">Ascot Software</a>
+        </div>
+        <a href="#contact" class="re-letstalk">Let’s Talk</a>
       </div>
     </header>
 
     <main>
       <!-- 1. Hero -->
       <section
-        class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-re-navy px-5 py-28 md:px-8"
+        class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-re-green px-5 py-28 md:px-8"
         data-re-hero
       >
         <div class="mx-auto w-full max-w-6xl">
           <h1
-            class="hero-title text-center font-sans font-bold leading-[0.95] tracking-[-0.04em] text-white text-[clamp(3rem,9vw,7rem)]"
+            class="hero-title text-center font-sans font-bold leading-[0.95] tracking-[-0.04em] text-white text-[clamp(2.75rem,8vw,6.5rem)]"
           >
-            Clarity<span class="text-re-red">.</span> Speed<span
+            It’s<span class="text-re-red">.</span> About<span
               class="text-re-red"
               >.</span
             >
-            Trust<span class="text-re-red">.</span>
+            Data<span class="text-re-red">.</span>
           </h1>
 
-          <div class="hero-defs mx-auto mt-16 max-w-2xl space-y-7 md:mt-24">
-            <div class="grid grid-cols-[7rem_1fr] gap-6 md:grid-cols-[9rem_1fr]">
-              <p class="text-right font-semibold text-white">Clarity</p>
+          <p
+            class="hero-copy mx-auto mt-8 max-w-2xl text-center text-lg leading-relaxed text-white/65 md:text-xl"
+          >
+            The shared AI foundation for real estate firms built on what your
+            business already knows, and built to grow with you. The best part,
+            it’s yours to keep.
+          </p>
+
+          <div class="hero-defs mx-auto mt-14 max-w-2xl space-y-7">
+            <div
+              class="grid grid-cols-[7rem_1fr] gap-6 md:grid-cols-[9rem_1fr]"
+            >
+              <p class="text-right font-semibold text-white">Knowledge</p>
               <p class="leading-relaxed text-white/55">
-                See the whole portfolio clearly before committing a dollar.
+                The shared context that runs your firm: rent rolls, leases, deal
+                history, and the institutional know-how in your people’s heads.
               </p>
             </div>
-            <div class="grid grid-cols-[7rem_1fr] gap-6 md:grid-cols-[9rem_1fr]">
-              <p class="text-right font-semibold text-white">Speed</p>
+            <div
+              class="grid grid-cols-[7rem_1fr] gap-6 md:grid-cols-[9rem_1fr]"
+            >
+              <p class="text-right font-semibold text-white">Skills</p>
               <p class="leading-relaxed text-white/55">
-                Move on opportunities while the window is still open.
+                The tools that let AI get the work done: deal flow,
+                underwriting, screening, research, compliance. Guaranteed
+                secure, and ready when you need them.
               </p>
             </div>
-            <div class="grid grid-cols-[7rem_1fr] gap-6 md:grid-cols-[9rem_1fr]">
-              <p class="text-right font-semibold text-white">Trust</p>
+            <div
+              class="grid grid-cols-[7rem_1fr] gap-6 md:grid-cols-[9rem_1fr]"
+            >
+              <p class="text-right font-semibold text-white">Routines</p>
               <p class="leading-relaxed text-white/55">
-                Build with discipline. Honor every commitment. Earn the next
-                deal.
+                Scheduled, repeatable tasks generated using natural language,
+                that run on their own. Outreach, renewals, reporting, you name
+                it. The work finishes whether your team is at their desks or
+                not.
               </p>
             </div>
           </div>
@@ -87,50 +116,51 @@
           class="reveal mx-auto max-w-3xl space-y-6 text-2xl italic leading-relaxed text-re-ink md:text-3xl"
         >
           <p>
-            "The deals we take on are hard — if they were easy, someone else
-            would have closed them already.
+            “Your business is already sitting on its biggest advantage, your
+            data. We just turn it on.
           </p>
           <p>
-            We demand excellence, and we lead with discipline. The capital is
-            real, and the communities we build in have been overlooked before.
-            That demands care.
+            We don’t sell you software and wish you luck. We embed with your
+            team, automate the work that moves your numbers, and deliver
+            infrastructure that’s yours to keep.
           </p>
-          <p>This work isn't about us; it's about the people we build for."</p>
+          <p>More output. Fewer errors. Hours back. Proof, not promises.”</p>
         </div>
         <p
           class="reveal mx-auto mt-8 max-w-3xl text-sm font-semibold uppercase tracking-[0.18em] text-re-muted"
         >
-          — Placeholder Name
+          — Ascot Software
         </p>
       </section>
 
       <!-- 3. What I do -->
       <section class="bg-re-surface-alt px-5 py-28 md:px-8 md:py-36">
         <div class="mx-auto max-w-3xl">
-          <p class="reveal re-eyebrow">What I Do</p>
+          <p class="reveal re-eyebrow">What We Do</p>
           <h2
             class="reveal mt-6 font-sans font-bold leading-[0.95] tracking-[-0.04em] text-re-ink text-[clamp(2.5rem,6vw,4.5rem)]"
           >
-            High stakes. All in<span class="text-re-red">.</span>
+            Unlock your Data. Deliver real ROI<span class="text-re-red">.</span>
           </h2>
           <div
             class="reveal mt-10 space-y-6 text-lg leading-relaxed text-re-muted"
           >
             <p>
-              I work with owners, operators, funds, and developers on real
-              estate challenges where the stakes are high and the playbook
-              hasn't been written.
+              AI products are scattered across a hundred separate windows. You
+              don’t need one more web portal, one more subscription. We give
+              your firm one shared brain, and agents with the skills to execute
+              your workflows exactly when you need them.
             </p>
             <p>
-              Whether you're deploying capital, repositioning an asset, or
-              building from the ground up, the goal stays the same: understand
-              the true scope of the problem, bring the right people to the
-              table, and deliver a tangible outcome.
+              Your most valuable workflows: deal sourcing, underwriting
+              research, outreach, reporting, and more, are captured, reused
+              everywhere, and delivered through the channels your team already
+              uses. The AI layer stops re-explaining itself and starts
+              compounding value.
             </p>
             <p>
-              It starts with listening: what are you trying to accomplish, and
-              what stands in the way? The people closest to the asset shape the
-              direction from the start.
+              And you see all of it. Owner dashboards, and reporting put impact,
+              adoption, and ROI on the screen. No black box, no “trust us.”
             </p>
           </div>
         </div>
@@ -139,97 +169,87 @@
       <!-- 4. How I work -->
       <section class="bg-white px-5 py-28 md:px-8 md:py-36">
         <div class="mx-auto max-w-5xl">
-          <p class="reveal re-eyebrow">How I Work</p>
+          <p class="reveal re-eyebrow">How We Work</p>
           <h2
             class="reveal mt-6 font-sans font-bold leading-[0.95] tracking-[-0.04em] text-re-ink text-[clamp(2.5rem,6vw,4.5rem)]"
           >
-            Questions. Team. Outcome<span class="text-re-red">.</span>
+            Embed. Automate. Prove<span class="text-re-red">.</span>
           </h2>
           <p
             class="reveal mt-8 max-w-2xl text-lg leading-relaxed text-re-muted"
           >
-            Every engagement begins with focused questions — what does this work
-            need to accomplish, who needs to be in the room, and what does
-            success actually look like? I work in three iterative phases, each
-            pressure-tested before the next begins.
+            Every engagement runs in three phases, with each one pressure-tested
+            before the next begins.
           </p>
 
           <div class="mt-16 grid gap-12 md:grid-cols-3">
             <div class="reveal">
               <span
                 class="re-process-icon"
-                data-icon="search"
+                data-icon="community"
                 aria-hidden="true"
               ></span>
               <h3 class="text-xl font-bold text-re-ink">
-                Understand the problem
+                Embed with your team
               </h3>
               <p
                 class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-re-red"
               >
-                Assess · Test · Learn
+                Inside · Open · Shared
               </p>
               <p class="mt-4 text-base leading-relaxed text-re-muted">
-                Pressure-test the thesis before anything moves. What does the
-                data say? What do the stakeholders need? What are the real
-                constraints — not the ones on paper?
+                We work alongside your people. The plan, the progress, and the
+                decisions stay open to you at every step. No black box.
               </p>
             </div>
             <div class="reveal">
               <span
                 class="re-process-icon"
-                data-icon="community"
+                data-icon="settings"
                 aria-hidden="true"
               ></span>
-              <h3 class="text-xl font-bold text-re-ink">Assemble the team</h3>
+              <h3 class="text-xl font-bold text-re-ink">Automate the metric</h3>
               <p
                 class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-re-red"
               >
-                Configure · Evaluate · Adjust
+                Map · Build · Train
               </p>
               <p class="mt-4 text-base leading-relaxed text-re-muted">
-                Operators, brokers, and specialists drawn from a deep bench and
-                selected for what the work actually demands.
+                We map a real process end to end, agree on the number we’re
+                moving, build the automation. Then we train your people to run
+                it without us (or with us, through managed services).
               </p>
             </div>
             <div class="reveal">
               <span
                 class="re-process-icon"
-                data-icon="check-circle"
+                data-icon="stats-up-square"
                 aria-hidden="true"
               ></span>
-              <h3 class="text-xl font-bold text-re-ink">Deliver the outcome</h3>
+              <h3 class="text-xl font-bold text-re-ink">Prove it in 60 days</h3>
               <p
                 class="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-re-red"
               >
-                Build · Measure · Refine
+                Baseline · Measure · Score
               </p>
               <p class="mt-4 text-base leading-relaxed text-re-muted">
-                Execute the plan. Measure results against the thesis. Refine
-                until the outcome meets the standard — it's a cycle that runs
-                until the work lands.
+                At day 30 and day 60 you get a scorecard: a hard metric against
+                the baseline, who’s adopting, who’s championing. If we can’t
+                prove it, we haven’t earned it.
               </p>
             </div>
           </div>
-
-          <button
-            type="button"
-            class="reveal mt-12 inline-flex items-center gap-2 text-sm font-semibold text-re-navy transition-opacity hover:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-re-navy/40 focus-visible:ring-offset-2"
-          >
-            In action
-            <span class="inline-flex" data-icon="nav-arrow-down" aria-hidden="true"></span>
-          </button>
         </div>
       </section>
 
       <!-- 5. Proof -->
       <section class="bg-white px-5 pb-28 md:px-8 md:pb-36">
         <div class="mx-auto max-w-5xl">
-          <p class="reveal re-eyebrow">Proof</p>
+          <p class="reveal re-eyebrow">Why Ascot</p>
           <h2
             class="reveal mt-6 font-sans font-bold leading-[0.95] tracking-[-0.04em] text-re-ink text-[clamp(2.5rem,6vw,4.5rem)]"
           >
-            In practice<span class="text-re-red">.</span>
+            It’s yours<span class="text-re-red">.</span>
           </h2>
 
           <div
@@ -238,16 +258,21 @@
             <p
               class="font-sans font-light tracking-[-0.03em] text-re-ink text-[clamp(3rem,7vw,5rem)]"
             >
-              $1B+
+              100%
             </p>
             <div class="space-y-4">
               <p class="text-lg leading-relaxed text-re-muted">
-                Real estate transactions structured and advised on across
-                residential, commercial, and mixed-use development.
+                Your data, your choice of AI provider. Every automation we build
+                is portable by design and transfers to your team in full. No
+                lock-in.
               </p>
-              <a href="#" class="re-arrow-link">
-                See the communities we helped develop
-                <span class="inline-flex" data-icon="arrow-right" aria-hidden="true"></span>
+              <a href="#contact" class="re-arrow-link">
+                See how the handoff works
+                <span
+                  class="inline-flex"
+                  data-icon="arrow-right"
+                  aria-hidden="true"
+                ></span>
               </a>
             </div>
           </div>
@@ -258,18 +283,24 @@
             <p
               class="font-sans font-light leading-[0.95] tracking-[-0.03em] text-re-ink text-[clamp(2.5rem,5vw,4rem)]"
             >
-              Zero <span class="text-re-muted">&rarr;</span><br />National Scale
+              Only<br />what's missing
             </p>
             <div class="space-y-4">
               <p class="text-lg leading-relaxed text-re-muted">
-                A neighborhood revitalization started as an idea that sat on the
-                desk for six months. It became a team, then a multi-city
-                program — turning overlooked parcels into housing that thousands
-                of families now call home.
+                The software your current subscription provides is being eaten
+                by the AI giants. We aren’t trying to replace them. When the
+                technology catches up and makes one of our pieces redundant, we
+                retire it and move to the next real gap. What lasts is your
+                data, and a partner who delivers maximum value by adapting as
+                the ground shifts.
               </p>
-              <a href="#" class="re-arrow-link">
-                Read one of our success stories
-                <span class="inline-flex" data-icon="arrow-right" aria-hidden="true"></span>
+              <a href="#contact" class="re-arrow-link">
+                Start your 60-day proof
+                <span
+                  class="inline-flex"
+                  data-icon="arrow-right"
+                  aria-hidden="true"
+                ></span>
               </a>
             </div>
           </div>
@@ -277,54 +308,86 @@
       </section>
 
       <!-- 6. Contact -->
-      <section id="contact" class="bg-white px-5 py-28 md:px-8 md:py-36">
+      <section
+        id="contact"
+        class="scroll-mt-24 bg-white px-5 py-28 md:px-8 md:py-36"
+      >
         <div class="mx-auto max-w-2xl text-center">
           <h2
             class="reveal font-sans font-bold leading-[0.95] tracking-[-0.04em] text-re-ink text-[clamp(3rem,8vw,6rem)]"
           >
-            Let's talk<span class="text-re-red">.</span>
+            Pick a workflow<span class="text-re-red">.</span>
           </h2>
           <p class="reveal mt-6 text-lg leading-relaxed text-re-muted">
-            Conversations start with a question. Send one and we'll find the
-            right starting point.
+            Give us 60 days. We’ll find the work that’s quietly costing you the
+            most, automate it end to end, and put the numbers on a dashboard you
+            control. If it works, you’ll want more, if not you’ll own everything
+            we built either way.
           </p>
 
-          <form id="re-contact-form" class="reveal mt-12 space-y-6 text-left">
-            <input
-              class="re-input"
-              type="text"
-              name="name"
-              placeholder="Name"
-              autocomplete="name"
-              aria-label="Name"
-            />
-            <input
-              class="re-input"
-              type="email"
-              name="email"
-              placeholder="Email"
-              autocomplete="email"
-              aria-label="Email"
-            />
-            <input
-              class="re-input"
-              type="text"
-              name="organization"
-              placeholder="Organization"
-              autocomplete="organization"
-              aria-label="Organization"
-            />
-            <textarea
-              class="re-input resize-y"
-              name="message"
-              rows="3"
-              placeholder="How can I help?"
-              aria-label="How can I help?"
-            ></textarea>
+          <form
+            id="re-contact-form"
+            data-division="Real Estate"
+            class="reveal mt-12 space-y-6 text-left"
+          >
+            <div>
+              <label for="re-name" class="re-label">Name</label>
+              <input
+                id="re-name"
+                class="re-input"
+                type="text"
+                name="name"
+                placeholder="Jane Doe"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div>
+              <label for="re-email" class="re-label">Email</label>
+              <input
+                id="re-email"
+                class="re-input"
+                type="email"
+                name="email"
+                placeholder="jane@firm.com"
+                autocomplete="email"
+                spellcheck="false"
+                required
+              />
+            </div>
+            <div>
+              <label for="re-organization" class="re-label">Organization</label>
+              <input
+                id="re-organization"
+                class="re-input"
+                type="text"
+                name="organization"
+                placeholder="Firm name"
+                autocomplete="organization"
+              />
+            </div>
+            <div>
+              <label for="re-message" class="re-label">How can we help?</label>
+              <textarea
+                id="re-message"
+                class="re-input resize-y"
+                name="message"
+                rows="3"
+                placeholder="Tell us about the workflow you’d like to automate."
+                required
+              ></textarea>
+            </div>
             <div class="pt-2 text-center">
-              <button type="submit" class="re-send">Send</button>
+              <button type="submit" class="re-send">Send message</button>
             </div>
           </form>
+
+          <p
+            data-form-status
+            role="status"
+            aria-live="polite"
+            class="re-form-status mt-6 text-center text-sm"
+          ></p>
 
           <p class="reveal mt-10 text-sm text-re-muted">
             Or email directly:
@@ -338,15 +401,20 @@
       </section>
     </main>
 
-    <footer class="bg-re-navy px-5 py-16 text-center md:px-8">
+    <footer class="bg-re-green px-5 py-16 text-center md:px-8">
       <p class="text-base font-bold tracking-[0.02em] text-white">
         Ascot Software — Real Estate
       </p>
-      <p class="mt-2 text-sm text-white/55">Clarity. Speed. Trust.</p>
+      <p class="mt-2 text-sm text-white/55">Embedded. Measured. Yours.</p>
       <p class="mt-4 text-xs text-white/40">
         © 2026 Ascot Software. All rights reserved.
       </p>
     </footer>
+
+    <div
+      id="load-gate"
+      class="absolute inset-0 z-50 bg-re-green transition-opacity duration-300"
+    ></div>
 
     <script type="module" src="/src/real-estate.js"></script>
   </body>

@@ -19,7 +19,7 @@
     <meta name="apple-mobile-web-app-title" content="Ascot Software" />
     <meta
       name="description"
-      content="Ascot Software builds dependable, AI-enabled software for healthcare and real estate teams."
+      content="Ascot Software builds dependable, AI-enabled systems and software for healthcare and real estate teams."
     />
     <meta name="theme-color" content="#f6f2eb" />
     <title>Ascot Software</title>
@@ -30,7 +30,105 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-background text-foreground antialiased">
+  <body class="bg-background text-foreground antialiased w-full h-screen">
+    <main
+      class="home-main relative flex flex-1 items-center justify-center w-full h-full overflow-hidden p-20"
+    >
+      <h1 class="sr-only">Ascot Software</h1>
+      <div
+        id="nav"
+        class="flex items-center justify-center h-full max-w-400 min-h-175 max-h-190"
+      >
+        <a
+          href="/healthcare/"
+          aria-label="Healthcare division"
+          class="split-panel group relative block h-full flex-1 -skew-x-12 overflow-hidden bg-orange-200 outline-none transition-[translate,box-shadow,opacity,scale] duration-500 ease-out touch-manipulation hover:z-20 hover:-translate-y-3 hover:scale-[1.03] hover:shadow-[0_35px_70px_-25px_rgba(40,24,0,0.55)] focus-visible:z-20 focus-visible:-translate-y-3 focus-visible:scale-[1.03] focus-visible:ring-4 focus-visible:ring-re-red/70"
+        >
+          <span
+            class="pointer-events-none absolute inset-0 z-0 bg-linear-to-br from-white/20 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100"
+          ></span>
+          <h2
+            aria-hidden="true"
+            class="absolute top-0 left-0 text-background text-[18rem] z-10 skew-x-12 transition-opacity duration-500 group-hover:opacity-20 group-focus-visible:opacity-20"
+          >
+            Ascot
+          </h2>
+          <h2
+            aria-hidden="true"
+            class="absolute bottom-0 left-[49%] text-background text-[18rem] z-10 skew-x-12 transition-opacity duration-500 group-hover:opacity-20 group-focus-visible:opacity-20"
+          >
+            Software
+          </h2>
+          <div
+            class="pointer-events-none absolute inset-0 z-20 flex translate-y-8 skew-x-12 flex-col items-center justify-center gap-4 px-8 text-center opacity-0 transition-[opacity,translate] duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100"
+          >
+            <span
+              class="text-xs font-bold uppercase tracking-[0.45em] text-foreground/55"
+              >Division</span
+            >
+            <span
+              class="text-5xl font-bold leading-[0.95] tracking-tight text-foreground md:text-6xl lg:text-7xl"
+              >Healthcare</span
+            >
+            <span
+              class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.25em] text-accent-strong/75"
+            >
+              Enter
+              <span
+                class="transition-transform duration-300 ease-out group-hover:translate-x-1.5 group-focus-visible:translate-x-1.5"
+                >&rarr;</span
+              >
+            </span>
+          </div>
+        </a>
+        <a
+          href="/real-estate/"
+          aria-label="Real Estate division"
+          class="split-panel group relative block h-full flex-1 -skew-x-12 overflow-hidden bg-re-green outline-none transition-[translate,box-shadow,opacity,scale] duration-500 ease-out touch-manipulation hover:z-20 hover:-translate-y-3 hover:scale-[1.03] hover:shadow-[0_35px_70px_-25px_rgba(3,30,22,0.6)] focus-visible:z-20 focus-visible:-translate-y-3 focus-visible:scale-[1.03] focus-visible:ring-4 focus-visible:ring-white/70"
+        >
+          <span
+            class="pointer-events-none absolute inset-0 z-0 bg-gradient-to-br from-white/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100"
+          ></span>
+          <h2
+            aria-hidden="true"
+            class="absolute top-0 -left-full text-background text-[18rem] z-10 skew-x-12 transition-opacity duration-500 group-hover:opacity-20 group-focus-visible:opacity-20"
+          >
+            Ascot
+          </h2>
+          <h2
+            aria-hidden="true"
+            class="absolute bottom-0 left-[-51%] text-background text-[18rem] z-10 skew-x-12 transition-opacity duration-500 group-hover:opacity-20 group-focus-visible:opacity-20"
+          >
+            Software
+          </h2>
+          <div
+            class="pointer-events-none absolute inset-0 z-20 flex translate-y-8 skew-x-12 flex-col items-center justify-center gap-4 px-8 text-center opacity-0 transition-[opacity,translate] duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100"
+          >
+            <span
+              class="text-xs font-bold uppercase tracking-[0.45em] text-white/65"
+              >Division</span
+            >
+            <span
+              class="text-5xl font-bold leading-[0.95] tracking-tight text-white md:text-6xl lg:text-7xl"
+              >Real Estate</span
+            >
+            <span
+              class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.25em] text-re-red/80"
+            >
+              Enter
+              <span
+                class="transition-transform duration-300 ease-out group-hover:translate-x-1.5 group-focus-visible:translate-x-1.5"
+                >&rarr;</span
+              >
+            </span>
+          </div>
+        </a>
+      </div>
+    </main>
+    <div
+      id="load-gate"
+      class="absolute inset-0 z-50 bg-background transition-opacity duration-300"
+    ></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

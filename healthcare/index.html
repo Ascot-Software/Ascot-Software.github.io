@@ -42,12 +42,14 @@
         <div class="site-nav mx-auto flex max-w-5xl flex-col gap-3">
           <div class="flex items-center justify-between gap-4">
             <a
-              href="#intro"
+              href="/"
               class="flex items-center gap-2 text-[1.55rem] font-bold tracking-[-0.06em] text-foreground transition-colors hover:text-accent-strong focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <img
                 src="/public/favicon.svg"
                 alt=""
+                width="24"
+                height="24"
                 class="inline size-6"
                 aria-hidden="true"
               />
@@ -342,6 +344,8 @@
                       <img
                         src="/public/gh-pulse.png"
                         alt=""
+                        width="120"
+                        height="120"
                         class="mt-5 inline size-30 rounded-[1.2rem] object-cover"
                         aria-hidden="true"
                       />
@@ -626,7 +630,14 @@
                     <div
                       class="inline-flex size-16 items-center justify-center rounded-[1.6rem] bg-accent text-2xl font-bold text-foreground shadow-soft"
                     >
-                      A
+                      <img
+                        src="/public/favicon.svg"
+                        alt=""
+                        width="32"
+                        height="32"
+                        class="inline size-8"
+                        aria-hidden="true"
+                      />
                     </div>
                     <p
                       class="mt-5 max-w-xs text-2xl font-medium leading-[1.25] tracking-[-0.04em] text-foreground"
@@ -674,39 +685,75 @@
                   </div>
                 </div>
 
-                <div class="grid content-start gap-3">
-                  <a href="#about" class="footer-link"
-                    >About
-                    <span
-                      class="site-icon inline-flex"
-                      aria-hidden="true"
-                      data-icon="arrow-up-right"
-                    ></span
-                  ></a>
-                  <a href="#work" class="footer-link"
-                    >Our Work
-                    <span
-                      class="site-icon inline-flex"
-                      aria-hidden="true"
-                      data-icon="arrow-up-right"
-                    ></span
-                  ></a>
-                  <a href="#capabilities" class="footer-link"
-                    >Capabilities
-                    <span
-                      class="site-icon inline-flex"
-                      aria-hidden="true"
-                      data-icon="arrow-up-right"
-                    ></span
-                  ></a>
-                  <a href="mailto:hello@ascotsoftware.com" class="footer-link"
-                    >Contact
-                    <span
-                      class="site-icon inline-flex"
-                      aria-hidden="true"
-                      data-icon="arrow-up-right"
-                    ></span
-                  ></a>
+                <div>
+                  <form
+                    id="hc-contact-form"
+                    data-division="Healthcare"
+                    class="grid content-start gap-5 text-left"
+                  >
+                    <div>
+                      <label for="hc-name" class="hc-label">Name</label>
+                      <input
+                        id="hc-name"
+                        class="hc-input"
+                        type="text"
+                        name="name"
+                        placeholder="Jane Doe"
+                        autocomplete="name"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label for="hc-email" class="hc-label">Email</label>
+                      <input
+                        id="hc-email"
+                        class="hc-input"
+                        type="email"
+                        name="email"
+                        placeholder="jane@health.org"
+                        autocomplete="email"
+                        spellcheck="false"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label for="hc-organization" class="hc-label"
+                        >Organization</label
+                      >
+                      <input
+                        id="hc-organization"
+                        class="hc-input"
+                        type="text"
+                        name="organization"
+                        placeholder="Organization name"
+                        autocomplete="organization"
+                      />
+                    </div>
+                    <div>
+                      <label for="hc-message" class="hc-label"
+                        >How can we help?</label
+                      >
+                      <textarea
+                        id="hc-message"
+                        class="hc-input resize-y"
+                        name="message"
+                        rows="3"
+                        placeholder="Tell us what you’re trying to figure out."
+                        required
+                      ></textarea>
+                    </div>
+                    <div>
+                      <button type="submit" class="cta-primary">
+                        Send message
+                      </button>
+                    </div>
+                  </form>
+                  <p
+                    data-form-status
+                    role="status"
+                    aria-live="polite"
+                    class="hc-form-status mt-4 text-sm"
+                  ></p>
                 </div>
               </div>
             </div>
@@ -714,6 +761,10 @@
         </section>
       </main>
     </div>
+    <div
+      id="load-gate"
+      class="absolute inset-0 z-50 bg-background transition-opacity duration-300"
+    ></div>
     <script type="module" src="/src/healthcare.js"></script>
   </body>
 </html>
