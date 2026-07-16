@@ -1,16 +1,15 @@
 # Task Execution Best Practices
 
 1. Task Execution rules override all others.
-2. Coding Best Practices override Component and Lib practices.
-3. Templates are non-negotiable formats.
-4. Plan your approach and identify which modules, components, and libraries will be involved,
-5. Find and load any relevant skills that can help with the task
-6. Provide a 3-5 bullet-point outline of your approach, naming specific files/components to be created or modified, before starting substantial or ambiguous tasks. Pause for feedback only when the user is explicitly asking for planning or approval.
-7. Implement the task following the coding best practices outlined below. When rules overlap, prioritize this workflow section first, then Coding Best Practices, then Component and Lib guidance, then the templates.
-8. Run relevant automated tests when the touched area has them, then run formatting, and type-checking
-9. Always provide a brief in-chat summary of changes made when marking a task as complete.
-10. Always provide a commit message (using the template) in your summary.
-11. When work is split into multiple distinct tasks, confirm before starting the next one.
+2. Templates are non-negotiable formats.
+3. Plan your approach and identify which modules, components, and libraries will be involved,
+4. Find and load any relevant skills that can help with the task
+5. Provide a 3-5 bullet-point outline of your approach, naming specific files/components to be created or modified, before starting substantial or ambiguous tasks. Pause for feedback only when the user is explicitly asking for planning or approval.
+6. Implement the task following the coding best practices outlined below. When rules overlap, prioritize this workflow section first, then Coding Best Practices, then Component and Lib guidance, then the templates.
+7. Run relevant automated tests when the touched area has them, then run formatting, and type-checking
+8. Always provide a brief in-chat summary of changes made when marking a task as complete.
+9. Always provide a commit message (using the template) in your summary.
+10. When work is split into multiple distinct tasks, confirm before starting the next one.
 
 # Coding Convensions
 
@@ -81,22 +80,35 @@ For multi-step tasks, state a brief plan:
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
-# Commit Message Template
+# Commit Messages
 
-Always use the following commit message template when marking a task as complete:
+we use `standard-version` for versioning and changelog generation, which relies on Conventional Commits. All commit messages must follow the Conventional Commit format:
 
 ```md
-# Short description of feature or task
+<type>(<scope>): <short description>
 
-- {Change 1}
-- {Change 2} ...
-- {Change N}
+- <change 1>
+- <change 2> ...
+- <change N>
 ```
 
-Example:
+The types can be one of the following:
+
+- `feat`: A new feature
+- `fix`: A bug fix
+- `docs`: Documentation only changes
+- `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- `refactor`: A code change that neither fixes a bug nor adds a feature
+- `perf`: A code change that improves performance
+- `test`: Adding missing tests or correcting existing tests
+- `build`: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+- `ci`: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+- `chore`: Other changes that don't modify src or test files (e.g., build process, package manager configs, etc)
+
+Important: `feat` and `fix` commits will trigger a new version bump (feat: MINOR, fix: PATCH), while the other types will not. Use `chore` for changes that do not modify src or test files (e.g., build process, package manager configs, etc).
 
 ```md
-# Initialize Next.js project with formatting and linting
+build(init): Initialize Next.js project with formatting and linting
 
 - Set up Next.js with TypeScript
 - Added initial folder structure
