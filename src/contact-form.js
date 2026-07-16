@@ -17,14 +17,14 @@
 // These ids are public by design (anyone can view the form), so committing them
 // is fine — they are not secrets.
 const GOOGLE_FORM_ACTION =
-  "https://docs.google.com/forms/d/e/FORM_ID/formResponse";
+  "https://docs.google.com/forms/d/e/1FAIpQLSefqcd48yjD7quRLg7MNXWyIlrB_qJXt7VWe6x3KQw6XIDzgg/formResponse";
 
 const ENTRY = {
-  name: "entry.__NAME__",
-  email: "entry.__EMAIL__",
-  organization: "entry.__ORGANIZATION__",
-  message: "entry.__MESSAGE__",
-  division: "entry.__DIVISION__",
+  name: "entry.482278590",
+  email: "entry.178231965",
+  organization: "entry.1926699741",
+  message: "entry.515587766",
+  division: "entry.1484635801",
 };
 
 /**
