@@ -3,19 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/favicon-96x96.png"
-      sizes="96x96"
-    />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-touch-icon.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Ascot Software" />
     <meta
       name="description"
@@ -55,12 +46,12 @@
   </head>
   <body class="bg-background text-foreground antialiased w-full h-screen">
     <main
-      class="home-main relative flex flex-1 items-center justify-center w-full h-full overflow-hidden p-20"
+      class="home-main relative flex flex-1 items-center justify-center w-full h-full lg:overflow-hidden lg:p-20"
     >
       <h1 class="sr-only">Ascot Software</h1>
       <div
         id="nav"
-        class="flex items-center justify-center h-full max-w-400 min-h-175 max-h-190"
+        class="items-center justify-center h-full max-w-400 min-h-175 max-h-190 hidden lg:flex"
       >
         <a
           href="/healthcare/"
@@ -143,6 +134,62 @@
                 class="transition-transform duration-300 ease-out group-hover:translate-x-1.5 group-focus-visible:translate-x-1.5"
                 >&rarr;</span
               >
+            </span>
+          </div>
+        </a>
+      </div>
+      <div id="nav-mobile" class="flex flex-col w-full h-full lg:hidden">
+        <a
+          href="/healthcare/"
+          aria-label="Healthcare division"
+          class="relative flex flex-col items-center justify-end w-full flex-1 overflow-hidden bg-orange-200 outline-none pb-2"
+        >
+          <div
+            class="pointer-events-none mb-10 flex flex-col items-center justify-center gap-4 px-8 text-center"
+          >
+            <span
+              class="text-xs font-bold uppercase tracking-[0.45em] text-foreground/55"
+              >Division</span
+            >
+            <span
+              class="text-5xl font-bold leading-[0.95] tracking-tight text-foreground md:text-6xl lg:text-7xl"
+              >Healthcare</span
+            >
+            <span
+              class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.25em] text-accent-strong/75"
+            >
+              Enter
+              <span>&rarr;</span>
+            </span>
+          </div>
+          <h2 class="text-[6rem] leading-[0.95] tracking-tight text-white">
+            Ascot
+          </h2>
+        </a>
+        <a
+          href="/real-estate/"
+          aria-label="Real Estate division"
+          class="relative flex flex-col items-center justify-start w-full flex-1 overflow-hidden bg-re-green outline-none pt-2"
+        >
+          <h2 class="text-[6rem] leading-[0.95] tracking-tight text-white">
+            Software
+          </h2>
+          <div
+            class="pointer-events-none mt-10 flex flex-col items-center justify-center gap-4 px-8 text-center"
+          >
+            <span
+              class="text-xs font-bold uppercase tracking-[0.45em] text-white/65"
+              >Division</span
+            >
+            <span
+              class="text-5xl font-bold leading-[0.95] tracking-tight text-white md:text-6xl lg:text-7xl"
+              >Real Estate</span
+            >
+            <span
+              class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.25em] text-re-red/80"
+            >
+              Enter
+              <span>&rarr;</span>
             </span>
           </div>
         </a>
